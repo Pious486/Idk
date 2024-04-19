@@ -6,6 +6,21 @@
 <style>
 canvas
   {border: 1px solid #d3d3d3;   backround-color: #f1f1f1; }
+  
 </style>
 </head>
+
+<body onload="startGame()">
+<script>
+fuction startGame()
+  {   myGameArea.start();   }
+var myGameArea = {
+  Canvass : document.createElement("canvas"),
+  start : function() {
+    this.canvas.width = 480;
+    this.canvas.height = 270;
+    this.context = this.canvas.getContext("2d");
+    document.body.insertBefore(this.canvas,document.body.childNodes[0]);
+  }
+</script>
 </html>
